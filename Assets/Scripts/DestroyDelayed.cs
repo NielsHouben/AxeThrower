@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DestroyDelayed : MonoBehaviour
 {
-    [SerializeField]
-    float lifetime = 30;
+  [SerializeField]
+  private float lifetime = 20;
 
-    void Start()
-    {
-        // destroys the object after a set time
-        Destroy(gameObject, lifetime);
-    }
+  void Start()
+  {
+    // destroys the object after a set time
+    Destroy(gameObject, lifetime);
+  }
 
 
 }

@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165eaa35d1a471644b7e2049698b4c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 20
+  lifetime: 5
 --- !u!114 &1418814549148055650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,4 +142,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torque: 10000
-  rb: {fileID: 0}
