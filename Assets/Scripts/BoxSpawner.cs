@@ -30,7 +30,10 @@ public class BoxSpawner : MonoBehaviour
 
       // transform.forward + transform.up * 0.5f is the direction of the force. In this case its slightly angled up (transform.up * 0.5f) and away from the camera (transform.forward)
       // go.GetComponent<Rigidbody>().AddForce((transform.forward + transform.up * 0.5f) * 5, ForceMode.Impulse);
-      go.GetComponent<Rigidbody>().AddForce((transform.forward * 2 + transform.up * 0.5f) * 5, ForceMode.Impulse);
+      go.GetComponent<Rigidbody>().AddForce((transform.forward * 1 + transform.up * 0.9f) * 5, ForceMode.Impulse);
+
+      // go.GetComponent<Rigidbody>().AddTorque(transform.up * 1000 * 10);
+      go.GetComponent<Rigidbody>().AddTorque(transform.right * 1000 * 10);
 
       StartCoroutine(CoolDownRoutine());
     }
