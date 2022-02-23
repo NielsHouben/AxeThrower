@@ -26,14 +26,15 @@ public class BoxSpawner : MonoBehaviour
 
       // transform.position - transform.up * 0.33f Gives us the camera height - 0.33 meters
       // GameObject go = Instantiate(boxPrefab, transform.position - transform.up * 0.33f, transform.rotation);
-      GameObject go = Instantiate(boxPrefab, transform.position + transform.up * -0.5f, Quaternion.Euler(new Vector3(0, 270, 90)));
+      // GameObject go = Instantiate(boxPrefab, transform.position + transform.up * -0.5f, Quaternion.Euler(new Vector3(0, 270, 90)));
+      GameObject go = Instantiate(boxPrefab, transform.position + transform.up * -0.3f + transform.right * 0.1f, Quaternion.Euler(new Vector3(0, 0, 0)));
       go.GetComponent<Rigidbody>().maxAngularVelocity = 100;
 
       // transform.forward + transform.up * 0.5f is the direction of the force. In this case its slightly angled up (transform.up * 0.5f) and away from the camera (transform.forward)
       // go.GetComponent<Rigidbody>().AddForce((transform.forward + transform.up * 0.5f) * 5, ForceMode.Impulse);
       go.GetComponent<Rigidbody>().AddForce((transform.forward * 1 + transform.up * 0.9f) * 5, ForceMode.Impulse);
 
-      go.GetComponent<Rigidbody>().AddTorque(15, 0, 0, ForceMode.Impulse);
+      go.GetComponent<Rigidbody>().AddTorque(10, 0, 0, ForceMode.Impulse);
 
       StartCoroutine(CoolDownRoutine());
     }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9207602860553797117}
   - component: {fileID: 1418814549148055650}
   m_Layer: 0
-  m_Name: Axe
+  m_Name: axe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
